@@ -16,6 +16,16 @@
           `)}
         </ul>
       </div>
+      ${gaugeVisible && $h`
+        <!-- must have unique key -->
+        <div key="gauge" class="gauge gauge-init" data-type="circle"
+          data-value="0.60"
+          data-value-text="60%"
+          data-value-text-color="#ff9800"
+          data-border-color="#ff9800"
+        ></div>
+      `}
+      <a href="#" class="button" @click=${toggleGauge}>Toggle Gauge</a>
     </div>
   </div>
 </template>
@@ -58,6 +68,14 @@
       // now it is safe to call Framework7 APIs
       $f7.dialog.alert('Hello!');
     });
+
+    // Gauge
+    let gaugeVisible = false;
+
+    const toggleGauge = () => {
+      gaugeVisible = !gaugeVisible;
+      $update();
+    }
 
     // component function must return render function
     return $render;

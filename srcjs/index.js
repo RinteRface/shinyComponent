@@ -8,7 +8,8 @@ import 'framework7/framework7-bundle.min.css';
 
 // Install F7 Components using .use() method on class:
 import Dialog from 'framework7/esm/components/dialog/dialog.js';
-Framework7.use([Dialog]);
+import Gauge from 'framework7/esm/components/gauge/gauge.js';
+Framework7.use([Dialog, Gauge]);
 
 import App from './components/app.f7.html';
 

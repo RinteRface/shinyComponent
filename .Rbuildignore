@@ -12,3 +12,6 @@ $run_dev.*
 ^webpack\.prod\.js$
 ^webpack\.common\.js$
 ^\\.babelrc$
+^LICENSE\.md$
+^README\.Rmd$
+^CODE_OF_CONDUCT\.md$

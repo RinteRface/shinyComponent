@@ -143,6 +143,8 @@ var app = new Framework7({
 })
 ```
 
+### Server
+
 On the server side (R):
 
 ``` r

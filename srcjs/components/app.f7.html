@@ -38,7 +38,20 @@
     });
 
     const openAlert = () => {
-      $f7.dialog.alert(title);
+      $f7.dialog.alert(title, function() {
+        // ok button callback
+        Shiny.setInputValue('alert_opened', false)
+      });
+
+      Shiny.setInputValue('alert_opened', true)
+      Shiny.setInputValue(
+        'alert',
+        {
+          message: 'Alert dialog was triggered!',
+          title: title,
+        },
+        {priority: 'event'}
+      )
     }
 
     $f7ready(() => {

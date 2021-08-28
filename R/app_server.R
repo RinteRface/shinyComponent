@@ -10,4 +10,11 @@ app_server <- function( input, output, session ) {
   observeEvent(TRUE, {
     session$sendCustomMessage("init", colnames(mtcars))
   })
+
+  observeEvent(input$alert, {
+    message(sprintf("Received from JS: %s", input$alert$message))
+    message(sprintf("App title is %s", input$alert$title))
+  })
+
+  observe({print(input$alert_opened)})
 }

@@ -1,0 +1,53 @@
+<!-- component template, uses same tagged template literals -->
+<template>
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="title">${title}</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <a @click=${openAlert}>Open Alert</a>
+      <div class="list simple-list">
+        <ul>
+          ${names.map((name) => $h`
+            <li>${name}</li>
+          `)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+<!-- component styles -->
+<style>
+  .red-link {
+    color: red;
+  }
+</style>
+<!-- rest of component logic -->
+<script>
+  import 'shiny';
+  export default (props, { $f7ready, $f7, $on, $update }) => {
+    const title = 'Hello World';
+    let names = ['John', 'Vladimir', 'Timo'];
+
+    Shiny.addCustomMessageHandler('init', function(message) {
+      names = message;
+      $update();
+    });
+
+    const openAlert = () => {
+      $f7.dialog.alert(title);
+    }
+
+    $f7ready(() => {
+      // now it is safe to call Framework7 APIs
+      $f7.dialog.alert('Hello!');
+    });
+
+    // component function must return render function
+    return $render;
+  }
+
+</script>

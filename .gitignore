@@ -1,0 +1,6 @@
+node_modules
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store

@@ -1,0 +1,29 @@
+[
+  {
+    "test": "\\.(js|jsx)$",
+    "use": [
+      "babel-loader"
+    ],
+    "exclude": "/node_modules/"
+  },
+  {
+    "test": "\\.f7.html$",
+    "use": [
+      "babel-loader",
+      "framework7-loader"
+    ]
+  },
+  {
+    "test": "\\.html$/i",
+    "use": [
+      "html-loader"
+    ]
+  },
+  {
+    "test": "\\.css$",
+    "use": [
+      "style-loader",
+      "css-loader"
+    ]
+  }
+]

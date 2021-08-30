@@ -1,4 +1,4 @@
-import Extra from '../components/extra.f7.html';
+import Extra from '../components/extra.f7.jsx';
 
 export default [
   {

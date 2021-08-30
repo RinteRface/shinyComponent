@@ -7,7 +7,7 @@
     "exclude": "/node_modules/"
   },
   {
-    "test": "\\.f7.html$",
+    "test": "\\.f7.(html|js|jsx)$",
     "use": [
       "babel-loader",
       "framework7-loader"

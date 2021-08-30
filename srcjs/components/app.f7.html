@@ -1,38 +1,51 @@
 <!-- component template, uses same tagged template literals -->
 <template>
-  <div class="page">
-    <div class="navbar">
-      <div class="navbar-bg"></div>
-      <div class="navbar-inner">
-        <div class="title">${title}</div>
+  <div id="app">
+    <div class="view view-init" id="view-main" data-url="/">
+      <div class="page">
+        <div class="navbar">
+          <div class="navbar-bg"></div>
+          <div class="navbar-inner">
+            <div class="title">${title}</div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar -->
+        <div class="toolbar toolbar-bottom">
+          <div class="toolbar-inner">
+            <!-- Toolbar links -->
+            <a @click=${openAlert}>Open Alert</a>
+            <a href="/extra/" data-transition="f7-cover">New Page</a>
+          </div>
+        </div>
+        <div class="page-content">
+          <ul>
+            <my-list-item id="item-1"></my-list-item>
+          </ul>
+          <div class="list simple-list">
+            <ul>
+              ${names.map((name) => $h`
+                <li>${name}</li>
+              `)}
+            </ul>
+          </div>
+          ${gaugeVisible && $h`
+            <!-- must have unique key -->
+            <div key="gauge" class="gauge gauge-init" data-type="circle"
+              data-value="0.60"
+              data-value-text="60%"
+              data-value-text-color="#ff9800"
+              data-border-color="#ff9800"
+            ></div>
+          `}
+          <a href="#" class="button" @click=${toggleGauge}>Toggle Gauge</a>
+        </div>
       </div>
-    </div>
-    <div class="page-content">
-      <a @click=${openAlert}>Open Alert</a>
-      <div class="list simple-list">
-        <ul>
-          ${names.map((name) => $h`
-            <li>${name}</li>
-          `)}
-        </ul>
-      </div>
-      ${gaugeVisible && $h`
-        <!-- must have unique key -->
-        <div key="gauge" class="gauge gauge-init" data-type="circle"
-          data-value="0.60"
-          data-value-text="60%"
-          data-value-text-color="#ff9800"
-          data-border-color="#ff9800"
-        ></div>
-      `}
-      <a href="#" class="button" @click=${toggleGauge}>Toggle Gauge</a>
     </div>
   </div>
 </template>
 <!-- rest of component logic -->
 <script>
-  import 'shiny';
-  export default (props, { $f7ready, $f7, $on, $update }) => {
+  export default (props, { $f7, $on, $update }) => {
     const title = 'Hello World';
     let names = ['John', 'Vladimir', 'Timo'];
 
@@ -58,16 +71,12 @@
       )
     }
 
-    $f7ready(() => {
-      // now it is safe to call Framework7 APIs
-      $f7.dialog.alert('Hello!');
-    });
-
     // Gauge
     let gaugeVisible = false;
 
     const toggleGauge = () => {
       gaugeVisible = !gaugeVisible;
+      console.log($f7.router.routes);
       $update();
     }
 

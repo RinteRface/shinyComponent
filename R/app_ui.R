@@ -9,8 +9,10 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    div(id = "app"),
-    tags$script(src = "www/index.js")
+    tags$body(
+      div(id = "app"),
+      tags$script(src = "www/index.js")
+    )
   )
 }
 

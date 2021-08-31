@@ -11,14 +11,6 @@ import Panel from 'framework7/esm/components/panel/panel.js';
 import View from 'framework7/esm/components/view/view.js';
 Framework7.use([Dialog, Gauge, Panel, View]);
 
-//import ListItem from './components/other-page.f7.jsx';
-//Framework7.registerComponent(
-//  'my-list-item',
-//
-//  // component function
-//  ListItem
-//)
-
 // Import App component
 import App from './components/app.f7.jsx';
 

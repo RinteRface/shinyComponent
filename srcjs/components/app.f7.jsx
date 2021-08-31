@@ -1,4 +1,4 @@
-//import CustomList from './custom-list.f7.js';
+import ListItem from './custom-list.f7.jsx';
 
 export default (props, {$f7, $f7ready, $on, $update }) => {
   const title = 'Hello World';
@@ -43,7 +43,7 @@ export default (props, {$f7, $f7ready, $on, $update }) => {
 
   return () => (
     <div id="app">
-      <div class="panel panel-left panel-init" data-backdrop="true" data-close-by-backdrop-click="true">
+      <div class="panel panel-left panel-init">
         <div class="block">"Hello"</div>
       </div>
       <div class="view view-main view-init safe-areas">
@@ -62,7 +62,11 @@ export default (props, {$f7, $f7ready, $on, $update }) => {
             </div>
           </div>
           <div class="page-content">
-
+            <ul>
+              <ListItem title="Item 1" />
+              <ListItem title="Item 2" />
+              <ListItem title="Item 3" />
+            </ul>
             <div class="list simple-list">
               <ul>
                 {names.map((name) =>

@@ -6,10 +6,10 @@ import 'framework7/framework7-bundle.min.css';
 
 // Install F7 Components using .use() method on class:
 import Dialog from 'framework7/esm/components/dialog/dialog.js';
+import Range from 'framework7/esm/components/range/range.js';
 import Gauge from 'framework7/esm/components/gauge/gauge.js';
 import Panel from 'framework7/esm/components/panel/panel.js';
-import View from 'framework7/esm/components/view/view.js';
-Framework7.use([Dialog, Gauge, Panel, View]);
+Framework7.use([Dialog, Range, Panel, Gauge]);
 
 // Import App component
 import App from './components/app.f7.jsx';

@@ -1,11 +1,11 @@
 import Extra from '../components/extra.f7.jsx';
 
 export default [
-  //{
-  //  path: '/'
-  //},
+  {
+    path: '/'
+  },
   {
     path: '/extra/',
-    asyncComponent: () => Extra
+    component: Extra
   }
 ]

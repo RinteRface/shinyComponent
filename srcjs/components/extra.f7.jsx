@@ -1,7 +1,11 @@
-export default (props, { $f7router }) => {
+import { Widget, initializeWidget} from './widget.f7.jsx';
+
+export default (props, { $f7, $f7router, $onMounted, $update }) => {
   const back = () => {
     $f7router.back();
   }
+
+  initializeWidget('customWidget', $onMounted, $f7, $update);
 
   return () => (
     <div class="page">
@@ -17,7 +21,7 @@ export default (props, { $f7router }) => {
           <a onClick={() => back()} data-transition="f7-cover">Back</a>
         </div>
       </div>
-      <div class="page-content">...</div>
+      <div class="page-content"><Widget id="customWidget" label="My custom widget:"/></div>
     </div>
   )
 }

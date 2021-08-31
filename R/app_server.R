@@ -16,5 +16,8 @@ app_server <- function( input, output, session ) {
     message(sprintf("App title is %s", input$alert$title))
   })
 
-  observe({print(input$alert_opened)})
+  observe({
+    print(input$alert_opened)
+    print(input$customWidget_range)
+  })
 }

@@ -2,11 +2,14 @@ Package: shinyComponent
 Title: Component powered app
 Version: 0.0.0.9000
 Authors@R: person('David', 'Granjon', email = 'dgranjon@ymail.com', role = c('cre', 'aut'))
-Description: App powered by {golem}, webpack, Framework7 components (esm). WIP
+Description: App powered by {golem}, webpack, Framework7 components (esm). Shows how
+    to mostly built the app with JS on the UI and R for data management, modeling, ...
 License: MIT + file LICENSE
 Imports: 
     config,
+    deSolve,
     golem,
+    jsonlite,
     processx,
     shiny
 Encoding: UTF-8
@@ -17,3 +20,5 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Language: en-US
+Depends: 
+    R (>= 2.10)

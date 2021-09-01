@@ -11,8 +11,10 @@ $run_dev.*
 ^webpack\.dev\.js$
 ^webpack\.prod\.js$
 ^webpack\.common\.js$
-^\\.babelrc$
+^\.babelrc$
 ^LICENSE\.md$
 ^README\.Rmd$
 ^CODE_OF_CONDUCT\.md$
 ^\.github$
+^app\.R$
+rsconnect$

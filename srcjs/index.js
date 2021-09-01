@@ -9,7 +9,8 @@ import Dialog from 'framework7/esm/components/dialog/dialog.js';
 import Range from 'framework7/esm/components/range/range.js';
 import Gauge from 'framework7/esm/components/gauge/gauge.js';
 import Panel from 'framework7/esm/components/panel/panel.js';
-Framework7.use([Dialog, Range, Panel, Gauge]);
+import Toast from 'framework7/esm/components/toast/toast.js';
+Framework7.use([Dialog, Range, Panel, Gauge, Toast]);
 
 // Import App component
 import App from './components/app.f7.jsx';

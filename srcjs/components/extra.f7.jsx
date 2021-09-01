@@ -1,5 +1,4 @@
 import { Widget, initializeWidget } from './widget.f7.jsx';
-import { VdpWidget, initializeVdpWidget } from './vdp.f7.jsx';
 
 export default (props, { $, $f7, $f7router, $onMounted, $update }) => {
   const back = () => {
@@ -7,7 +6,6 @@ export default (props, { $, $f7, $f7router, $onMounted, $update }) => {
   }
 
   initializeWidget('customWidget', $onMounted, $f7, $update);
-  initializeVdpWidget($onMounted, $, $f7);
 
   return () => (
     <div class="page">
@@ -24,7 +22,6 @@ export default (props, { $, $f7, $f7router, $onMounted, $update }) => {
         </div>
       </div>
       <div class="page-content">
-        <VdpWidget label="Van der Pol Model"/>
         <Widget id="customWidget" label="Gauge and Range API"/>
       </div>
     </div>

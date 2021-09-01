@@ -1,6 +1,7 @@
 import ListItem from './custom-list.f7.jsx';
+import { VdpWidget, initializeVdpWidget } from './vdp.f7.jsx';
 
-export default (props, {$f7, $f7ready, $on, $update }) => {
+export default (props, {$, $f7, $f7ready, $on, $update }) => {
   const title = 'Hello World';
   let names = ['John', 'Vladimir', 'Timo'];
 
@@ -41,6 +42,8 @@ export default (props, {$f7, $f7ready, $on, $update }) => {
     $f7.panel.open('.panel-left');
   }
 
+  initializeVdpWidget($f7);
+
   return () => (
     <div id="app">
       <div class="panel panel-left panel-init">
@@ -62,6 +65,7 @@ export default (props, {$f7, $f7ready, $on, $update }) => {
             </div>
           </div>
           <div class="page-content">
+            <VdpWidget label="Van der Pol Model"/>
             <ul>
               <ListItem title="Item 1" />
               <ListItem title="Item 2" />

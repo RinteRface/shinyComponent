@@ -46,10 +46,9 @@ const VdpWidget = (props, { $f7, $update}) => {
     )
 }
 
-const initializeVdpWidget = (event, dom, app) => {
+const initializeVdpWidget = (app) => {
   let linePlot, phasePlot;
-  let $ = dom;
-  event(() => {
+  $(document).on('shiny:connected', () => {
     // Init vals for ODE model computation
     Shiny.setInputValue(
         'mu', 

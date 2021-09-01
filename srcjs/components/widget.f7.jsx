@@ -1,11 +1,14 @@
 const Widget = (props) => {
 
     return () => (
-        <div id={props.id} class="block block-strong text-align-center">
-            <h3>{props.label}</h3>
-            <div class="range-slider" id={props.id + '_range'}></div>
-            <br></br>
-            <div class="gauge" id={props.id + '_gauge'}></div>
+        <div>
+            <div class="block-title">{props.label}</div>
+            <div id={props.id} class="block block-strong text-align-center">
+                <h3>Move me!</h3>
+                <div class="range-slider" id={props.id + '_range'}></div>
+                <br></br>
+                <div class="gauge" id={props.id + '_gauge'}></div>
+            </div>
         </div>
     )
 }

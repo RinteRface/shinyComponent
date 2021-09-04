@@ -18,3 +18,6 @@ $run_dev.*
 ^\.github$
 ^app\.R$
 rsconnect$
+^jsdoc\.conf\.json$
+^jsdoc$
+^tutorials$

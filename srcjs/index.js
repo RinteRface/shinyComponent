@@ -27,3 +27,14 @@ var app = new Framework7({
   component: App
 });
 
+
+// REMOVE THIS
+
+/**
+ * Adds 1 to a number.
+ * 
+ * @param  {Number} x Number to add one to
+ */
+export const fn = (x) => {
+  return x + 1;
+} 

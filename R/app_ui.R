@@ -2,7 +2,7 @@
 #'
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
-#' @inheritsParam golem_add_external_resources
+#' @inheritParams golem_add_external_resources
 #' @import shiny
 #' @noRd
 app_ui <- function(request, title = NULL) {
@@ -37,8 +37,8 @@ golem_add_external_resources <- function(title){
     tags$meta(charset = "utf-8"),
     tags$meta(
       name = "viewport",
-      content = "width=device-width, initial-scale=1, 
-      maximum-scale=1, minimum-scale=1, user-scalable=no, 
+      content = "width=device-width, initial-scale=1,
+      maximum-scale=1, minimum-scale=1, user-scalable=no,
       viewport-fit=cover"
     ),
     tags$meta(

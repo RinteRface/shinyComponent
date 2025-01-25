@@ -10,9 +10,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/RinteRface/shinyComponent/workflows/R-CMD-check/badge.svg)](https://github.com/RinteRface/shinyComponent/actions)
 <!-- badges: end -->
 
-App powered by {golem}, webpack, Framework7 components (esm). WIP App is
-deployed on
-[shinyapps.io](https://dgranjon.shinyapps.io/shinyComponent/).
+App powered by {golem}, webpack, Framework7 components (esm).
 
 ## Installation
 
